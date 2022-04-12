@@ -10,7 +10,7 @@ public class IsometricCharacterRenderer : MonoBehaviour
     public static readonly string[] runDirections = {"Run N", "Run NW", "Run W", "Run SW", "Run S", "Run SE", "Run E", "Run NE"};
 
     Animator animator;
-    int lastDirection;
+    public int lastDirection;
 
     private void Awake()
     {
@@ -38,6 +38,7 @@ public class IsometricCharacterRenderer : MonoBehaviour
             //save the answer to lastDirection
             directionArray = runDirections;
             lastDirection = DirectionToIndex(direction, 8);
+            //Debug.Log
         }
 
         //tell the animator to play the requested state
